@@ -15,7 +15,7 @@ class AdminHome extends Component {
     return (
 
       <div>
-        <Background backgroundImage="http://amazingpetgrooming.ca/wp-content/uploads/2016/11/perro-secandose.jpg">
+        <Background backgroundImage="http://www.happypawsunleashed.com/wp-content/uploads/2015/11/dog-grooming-453x302.jpg">
           <img src="/images/logo_300.png" style={{ width: "200px" }} alt="main logo" />
         </Background>
 
