@@ -2,7 +2,7 @@
 ## Business management framework for small businesses ##
 ![LOGO](./client/public/images/vendorBooker_Logo.png)
 
-See the project [live](https://idiaz-vendorbooker.herokuapp.com/)!
+See the project [live](https://vendor-booker-alex.herokuapp.com)!
 
 > **Cretaed by**
 - Christopher Donner @ <christopher.donner@gmail.com>!
