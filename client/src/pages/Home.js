@@ -37,11 +37,12 @@ class Home extends Component {
       <Background backgroundImage="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/08/16160339/akc-dog-grooming-at-home-729.jpg">
       </Background>
 
-      <Container style={{ marginTop: 30 }}>
+      <Container style={{ marginTop: 30, background: "#2377be", padding: "20px", border: "solid 15px white" }}>
         <Row>
           <Col size="md-12">
-            <h1>Our Services Stand Apart</h1>
+            <h1 style={{color: "white", marginBottom: "20px", textAlign: "center"}}>Our Services Stand Apart</h1>
           </Col>
+          <hr style={{background: "white"}}></hr>
         </Row>
         <Row>
           <Col size="md-12">
@@ -49,9 +50,9 @@ class Home extends Component {
     
                   {this.state.services.map(service => (
                     <div className="col-auto d-none d-lg-block" key={service._id}>
-                    <Card.Img variant="top" src={`/images/${service.images}`} alt="bathing" style={{  width: "170px" }} />
+                    <Card.Img variant="top" src={`/images/${service.images}`} alt="bathing" style={{  width: "85%", border: "solid 15px #9bbedb" }} />
                     <Card.Body>
-                      <Card.Title>{service.name}</Card.Title>
+                      <Card.Title style={{color: "white", fontSize: "28px"}}>{service.name}</Card.Title>
                       <Button variant="info" href="/services">More Info</Button>
                     </Card.Body>
                     </div>
