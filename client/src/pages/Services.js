@@ -14,26 +14,27 @@ class Services extends Component {
 
   loadServices = () => {
     API.getServices()
-      .then(res => this.setState({ services: res.data }))
-      .catch(err => console.log(err));
+      .then((res) => this.setState({ services: res.data }))
+      .catch((err) => console.log(err));
   };
 
-  deleteService = id => {
+  deleteService = (id) => {
     API.deleteService(id)
       .then(() => this.loadServices())
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   render() {
-
     return (
       <div>
-        <Background backgroundImage="https://thenypost.files.wordpress.com/2018/10/dog-grooming-feature.jpg?quality=90&strip=all&w=618&h=410&crop=1">      </Background>
+        <Background backgroundImage="https://res.cloudinary.com/amazing-pet-grooming/image/upload/v1584049677/amazing/qqkif7h58ahw8h0qtnlm.jpg">
+          {" "}
+        </Background>
 
         <AllServices
           services={this.state.services}
-          color='info'
-          text='Book service'
+          color="info"
+          text="Book service"
         />
       </div>
     );

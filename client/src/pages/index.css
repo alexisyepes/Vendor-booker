@@ -1,28 +1,23 @@
 .panel-default > .panel-heading {
-    background-color:rgb(167, 12, 12);
+  background-color: rgb(167, 12, 12);
 }
 
 .card > .card-header {
-    background-color:rgba(184, 218, 255, 0.705);
-    padding: 0px;
+  background-color: rgba(184, 218, 255, 0.705);
+  padding: 0px;
 }
 
 .card-header > .btn {
-    color: rgb(0, 123, 255);
+  color: rgb(0, 123, 255);
 }
 
-/* .d-lg-block{
-    background-color: white;
-    width: 185px !important;
-    padding: 0px;
-    padding-left: 7px;
-    padding-top: 7px;
+.home-services-wrapper {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.slick-slide{
-    width: 195px !important
+.card-content-home {
+  text-align: center;
 }
-
-.d-lg-block > .card-body{
-    height: 140px;
-} */
