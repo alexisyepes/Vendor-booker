@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+require("dotenv").config();
 
 // const seedDB = require('./scripts/seedDB')
 
@@ -18,18 +19,17 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// Connect to database... then if all good start server
+// Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI ||
-  //  "mongodb://localhost/vendorbooker", {
-  "mongodb://vendorbooker:v3ndorbooker@ds059496.mlab.com:59496/heroku_rjwfngfr", {
-    useNewUrlParser: true
+  `mongodb+srv://vendor-booker:${process.env.MONGO_ATLAS}@cluster0.7lf47.mongodb.net/vendor-booker?retryWrites=true&w=majority`,
+
+  {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
   }
-).then(() => {
-  // Start the API server
-  app.listen(PORT, function () {
-    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-  });
-}).catch(err => {
-  console.log(err);
+);
+
+// Start the server
+app.listen(PORT, function () {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
